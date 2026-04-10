@@ -1,0 +1,85 @@
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# =========================
+# FastAPI / Backend
+# =========================
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+# =========================
+# Frontend / Node / Vite
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+*.tsbuildinfo
+
+# General node files
+node_modules/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Local data / generated outputs
+# =========================
+data/processed/
+data/generated/
+backend/uploads/
+backend/tmp/
+
+# =========================
+# Mac / misc
+# =========================
+.AppleDouble
+.LSOverride
