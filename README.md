@@ -166,7 +166,7 @@ Example brief types currently supported well:
 
 - prompt-based brief analysis
 - structured output generation
-- OpenAI integration planned for live analysis
+- OpenAI integration for live brief analysis
 
 ### Development
 
