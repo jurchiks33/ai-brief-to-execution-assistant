@@ -186,10 +186,10 @@ At this stage, the repository is focused on:
 - [x] display results in the UI
 
 ### Phase 3 — AI Integration
-- [ ] replace mock analysis with live LLM analysis
-- [ ] improve prompt structure
-- [ ] enforce more reliable output formatting
-- [ ] improve usefulness of generated execution steps and task suggestions
+- [x] replace mock analysis with live LLM analysis
+- [x] improve prompt structure
+- [x] enforce more reliable output formatting
+- [x] improve usefulness of generated execution steps and task suggestions
 
 ### Phase 4 — Demo Polish
 - [ ] improve interface styling

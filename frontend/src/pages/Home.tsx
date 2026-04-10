@@ -17,7 +17,7 @@ export default function Home() {
       const data = await analyzeBrief(briefText);
       setResult(data);
     } catch (err) {
-      setError("Something went wrong while analyzing the brief.");
+      setError("The brief could not be analyzed right now. Please try again or use another sample brief.");
       setResult(null);
     } finally {
       setIsLoading(false);
@@ -30,10 +30,10 @@ export default function Home() {
         <p className="eyebrow">Moodgruppen MVP Demo</p>
         <h1>AI Brief-to-Execution Assistant</h1>
         <p className="hero-text">
-          Turn an unstructured client brief into a clearer execution plan with goals,
-          deliverables, missing information, and suggested next steps.
+            Designed to help agency teams turn messy client briefs into clearer internal execution plans.
+            The demo extracts key goals, likely deliverables, missing client inputs, and suggested next steps.
         </p>
-      </section>
+        </section>
 
       <BriefForm onSubmit={handleAnalyzeBrief} isLoading={isLoading} />
 

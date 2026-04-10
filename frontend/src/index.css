@@ -229,3 +229,9 @@ textarea {
     transform: rotate(360deg);
   }
 }
+
+.loading-text {
+  margin: 6px 0 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}

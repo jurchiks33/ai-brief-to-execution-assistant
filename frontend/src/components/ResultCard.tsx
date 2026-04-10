@@ -14,13 +14,13 @@ export default function ResultCard({ result }: ResultCardProps) {
       </section>
 
       <div className="results-grid">
-        <SectionBlock title="Objectives" items={result.objectives} />
+        <SectionBlock title="Campaign Objectives" items={result.objectives} />
         <SectionBlock title="Target Audience" items={result.target_audience} />
-        <SectionBlock title="Channels" items={result.channels} />
-        <SectionBlock title="Deliverables" items={result.deliverables} />
-        <SectionBlock title="Missing Information" items={result.missing_information} />
-        <SectionBlock title="Execution Steps" items={result.execution_steps} />
-        <SectionBlock title="Suggested Tasks" items={result.suggested_tasks} />
+        <SectionBlock title="Recommended Channels" items={result.channels} />
+        <SectionBlock title="Suggested Deliverables" items={result.deliverables} />
+        <SectionBlock title="Missing Client Inputs" items={result.missing_information} />
+        <SectionBlock title="Execution Plan" items={result.execution_steps} />
+        <SectionBlock title="Internal Task Breakdown" items={result.suggested_tasks} />
       </div>
     </div>
   );
