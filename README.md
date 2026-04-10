@@ -178,12 +178,12 @@ At this stage, the repository is focused on:
 - [x] set up frontend foundation
 
 ### Phase 2 — Core MVP Flow
-- [ ] create brief submission flow
-- [ ] connect frontend to backend
+- [x] create brief submission flow
+- [x] connect frontend to backend
 - [x] validate raw input
 - [x] build brief analysis endpoint
 - [x] return structured execution output
-- [ ] display results in the UI
+- [x] display results in the UI
 
 ### Phase 3 — AI Integration
 - [ ] replace mock analysis with live LLM analysis
