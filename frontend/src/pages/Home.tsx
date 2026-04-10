@@ -6,8 +6,13 @@ import { analyzeBrief } from "../services/api";
 import type { BriefAnalysisResponse } from "../types/brief";
 
 export default function Home() {
+  // Lagrer analysen fra backend når briefen er behandlet ferdig.
   const [result, setResult] = useState<BriefAnalysisResponse | null>(null);
+
+  // Styrer lastingstilstanden slik at UI kan vise spinner og deaktivere innsending.
   const [isLoading, setIsLoading] = useState(false);
+
+  // Viser en brukervennlig feilmelding dersom API-kallet feiler.
   const [error, setError] = useState("");
 
   const handleAnalyzeBrief = async (briefText: string) => {

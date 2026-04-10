@@ -7,9 +7,12 @@ from app.core.config import settings
 from app.schemas.brief import BriefAnalysisResponse
 
 
+# Oppretter OpenAI-klient én gang slik at den kan gjenbrukes i service-laget.
 client = OpenAI(api_key=settings.openai_api_key)
 
 
+# JSON-schema som tvinger modellen til å returnere et fast og forutsigbart svarformat.
+# Dette gjør frontend-visningen mer stabil og reduserer behovet for ekstra parsinglogikk.
 BRIEF_ANALYSIS_SCHEMA: dict[str, Any] = {
     "name": "brief_analysis_response",
     "strict": True,
@@ -65,7 +68,7 @@ BRIEF_ANALYSIS_SCHEMA: dict[str, Any] = {
 
 def _fallback_response() -> BriefAnalysisResponse:
     return BriefAnalysisResponse(
-        summary="The brief was received, but the AI analysis could not be completed. A fallback structure was returned so the demo keeps working.",
+        summary="Briefen ble mottatt, men AI-analysen kunne ikke fullføres. En reservestruktur ble returnert slik at demoen fortsatt fungerer.",
         objectives=[
             "Clarify the campaign goal",
             "Identify the target audience",
@@ -110,9 +113,11 @@ def analyze_brief(brief_text: str) -> BriefAnalysisResponse:
     Analyze a raw client brief and return a structured execution plan.
     """
 
+    # Hvis API-nøkkel ikke er satt, returnerer vi fallback slik at appen fortsatt fungerer.
     if not settings.openai_api_key:
         return _fallback_response()
 
+    # Systemprompten styrer rollen, språkreglene og formatkravene modellen skal følge.
     system_prompt = """
 You are an AI operations assistant for a marketing agency.
 
@@ -147,6 +152,7 @@ Rules:
 - Suggested tasks should feel like real internal agency execution tasks.
 """
 
+    # Userprompten sender inn selve briefen som skal analyseres.
     user_prompt = f"""
 Analyze this raw client brief and return a structured response in the same language as the input brief.
 
@@ -155,6 +161,7 @@ CLIENT BRIEF:
 """
 
     try:
+        # Ber modellen returnere data i et fast JSON-schema for stabil backend/frontend-kontrakt.
         completion = client.chat.completions.create(
             model=settings.openai_model,
             temperature=0.3,

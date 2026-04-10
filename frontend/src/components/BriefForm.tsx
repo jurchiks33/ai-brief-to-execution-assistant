@@ -5,6 +5,8 @@ interface BriefFormProps {
   isLoading: boolean;
 }
 
+// Ferdige eksempelbriefs gjør det enkelt å teste demoen raskt
+// uten at brukeren må skrive inn egen tekst først.
 const sampleBriefs = {
   productLaunch: `Vi skal lansere et nytt premium kosttilskudd rettet mot unge yrkesaktive i Oslo og Bergen. Målet er å bygge kjennskap i forkant av lansering og samtidig drive trafikk til en landingsside med ventelistepåmelding. Vi ser for oss at sosiale medier, betalt annonsering og innholdsproduksjon vil være relevante kanaler, men vi ønsker hjelp til å strukturere dette bedre.
 Vi har noe visuelt materiell klart, men budskap, kampanjestruktur og publiseringsplan er ikke definert ennå. Budsjettet er heller ikke endelig avklart, og vi trenger hjelp til å forstå hvilke leveranser som bør prioriteres først, hva som mangler i briefen, og hvordan teamet bør gå frem for å komme raskt i gang.`,
@@ -15,10 +17,13 @@ Vi har noe visuelt materiell klart, men budskap, kampanjestruktur og publisering
 };
 
 export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
+  // Holder på teksten brukeren skriver inn eller velger fra eksempelknappene.
   const [briefText, setBriefText] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    // Sender briefen opp til parent-komponenten som håndterer API-kallet.
     await onSubmit(briefText);
   };
 

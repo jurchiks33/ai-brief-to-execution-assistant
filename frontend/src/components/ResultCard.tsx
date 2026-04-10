@@ -13,6 +13,7 @@ export default function ResultCard({ result }: ResultCardProps) {
         <p>{result.summary}</p>
       </section>
 
+      {/* Mapper den strukturerte backend-responsen til tydelige seksjoner i UI-et. */}
       <div className="results-grid">
         <SectionBlock title="Kampanjemål" items={result.objectives} />
         <SectionBlock title="Målgruppe" items={result.target_audience} />
