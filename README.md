@@ -168,47 +168,42 @@ At this stage, the repository is focused on:
 ## Development Roadmap
 
 ### Phase 1 — Foundation
-
-- define project idea
-- define MVP scope
-- create folder structure
-- create initial README
-- create initial `.gitignore`
-- create environment configuration template
-- set up backend foundation
-- set up frontend foundation
+- [x] define project idea
+- [x] define MVP scope
+- [x] create folder structure
+- [x] create initial README
+- [x] create initial `.gitignore`
+- [x] create environment configuration template
+- [x] set up backend foundation
+- [x] set up frontend foundation
 
 ### Phase 2 — Core MVP Flow
-
-- create brief submission flow
-- connect frontend to backend
-- validate raw input
-- build brief analysis endpoint
-- return structured execution output
-- display results in the UI
+- [ ] create brief submission flow
+- [ ] connect frontend to backend
+- [x] validate raw input
+- [x] build brief analysis endpoint
+- [x] return structured execution output
+- [ ] display results in the UI
 
 ### Phase 3 — AI Integration
-
-- replace mock analysis with live LLM analysis
-- improve prompt structure
-- enforce more reliable output formatting
-- improve usefulness of generated execution steps and task suggestions
+- [ ] replace mock analysis with live LLM analysis
+- [ ] improve prompt structure
+- [ ] enforce more reliable output formatting
+- [ ] improve usefulness of generated execution steps and task suggestions
 
 ### Phase 4 — Demo Polish
-
-- improve interface styling
-- add better loading and error handling
-- refine sample brief flow
-- improve documentation and demo presentation
+- [ ] improve interface styling
+- [ ] add better loading and error handling
+- [ ] refine sample brief flow
+- [ ] improve documentation and demo presentation
 
 ### Phase 5 — Future Expansion
-
-- project saving
-- editable outputs
-- export options
-- internal templates
-- role-based task generation
-- integrations with Slack, Notion, or project tools
+- [ ] project saving
+- [ ] editable outputs
+- [ ] export options
+- [ ] internal templates
+- [ ] role-based task generation
+- [ ] integrations with Slack, Notion, or project tools
 
 ---
 
