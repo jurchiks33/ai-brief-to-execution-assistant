@@ -3,10 +3,9 @@ export default function LoadingSpinner() {
     <div className="loading-box">
       <div className="spinner" />
       <div>
-        <strong>Analyzing brief...</strong>
+        <strong>Analyserer brief...</strong>
         <p className="loading-text">
-          Generating summary, channel suggestions, missing inputs, and execution steps.
-        </p>
+          Genererer oppsummering, kanalvalg, manglende informasjon og foreslåtte gjennomføringssteg.        </p>
       </div>
     </div>
   );

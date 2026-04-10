@@ -123,6 +123,12 @@ Write for an internal agency team handling multiple clients.
 Do not use markdown.
 Do not include commentary outside the JSON structure.
 
+Very important language rule:
+- If the client brief is written in Norwegian, return all fields in Norwegian.
+- If the client brief is written in English, return all fields in English.
+- Always match the language of the input brief.
+- Do not translate to English unless the input is in English.
+
 Focus on:
 - what the client seems to want
 - what the business goal appears to be
@@ -142,7 +148,7 @@ Rules:
 """
 
     user_prompt = f"""
-Analyze this raw client brief and return a structured response.
+Analyze this raw client brief and return a structured response in the same language as the input brief.
 
 CLIENT BRIEF:
 {brief_text}

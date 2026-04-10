@@ -17,7 +17,7 @@ export default function Home() {
       const data = await analyzeBrief(briefText);
       setResult(data);
     } catch (err) {
-      setError("The brief could not be analyzed right now. Please try again or use another sample brief.");
+      setError("Briefen kunne ikke analyseres akkurat nå. Prøv igjen eller test med en annen eksempelbrief.");
       setResult(null);
     } finally {
       setIsLoading(false);
@@ -30,8 +30,9 @@ export default function Home() {
         <p className="eyebrow">Moodgruppen MVP Demo</p>
         <h1>AI Brief-to-Execution Assistant</h1>
         <p className="hero-text">
-            Designed to help agency teams turn messy client briefs into clearer internal execution plans.
-            The demo extracts key goals, likely deliverables, missing client inputs, and suggested next steps.
+            Laget for å hjelpe byråteam med å gjøre utydelige kundebriefs om til tydeligere interne
+            gjennomføringsplaner. Demoen trekker ut mål, sannsynlige leveranser, manglende informasjon
+            og foreslåtte neste steg.
         </p>
         </section>
 

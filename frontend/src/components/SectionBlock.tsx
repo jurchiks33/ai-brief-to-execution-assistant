@@ -14,7 +14,7 @@ export default function SectionBlock({ title, items }: SectionBlockProps) {
           ))}
         </ul>
       ) : (
-        <p>No items available.</p>
+        <p>Ingen punkter tilgjengelig.</p>
       )}
     </section>
   );

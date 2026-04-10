@@ -6,11 +6,12 @@ interface BriefFormProps {
 }
 
 const sampleBriefs = {
-  productLaunch: `We need a campaign for a new product launch aimed at young professionals in Oslo. The goal is to increase awareness and drive sign-ups. We want to use social media, paid ads, and landing page content. Budget is not finalized yet, and launch timing is sometime next month.`,
+  productLaunch: `Vi skal lansere et nytt premium kosttilskudd rettet mot unge yrkesaktive i Oslo og Bergen. Målet er å bygge kjennskap i forkant av lansering og samtidig drive trafikk til en landingsside med ventelistepåmelding. Vi ser for oss at sosiale medier, betalt annonsering og innholdsproduksjon vil være relevante kanaler, men vi ønsker hjelp til å strukturere dette bedre.
+Vi har noe visuelt materiell klart, men budskap, kampanjestruktur og publiseringsplan er ikke definert ennå. Budsjettet er heller ikke endelig avklart, og vi trenger hjelp til å forstå hvilke leveranser som bør prioriteres først, hva som mangler i briefen, og hvordan teamet bør gå frem for å komme raskt i gang.`,
 
-  leadGeneration: `We are a regional home services company and want help generating more qualified leads for kitchen renovation projects in the Oslo and Akershus area. Our main goal is to increase incoming consultation requests over the next 2–3 months. We think Google Ads, Facebook/Instagram, and landing page improvements could be relevant, but budget is still being discussed internally.`,
+  leadGeneration: `Vi er en regional aktør innen oppussing og ønsker hjelp til å generere flere kvalifiserte leads for kjøkkenrenovering i Oslo og Akershus. Hovedmålet er å øke antall henvendelser de neste 2–3 månedene. Vi tror Google Ads, Facebook/Instagram og forbedringer på landingssiden kan være relevante tiltak, men budsjettet er fortsatt til intern vurdering.`,
 
-  seoContent: `We are launching a B2B cybersecurity consultancy aimed at small and medium-sized businesses in Norway. We want to improve visibility, build trust, and generate leads through content and search. The goal is to position us as a credible expert and start generating inbound leads over the next quarter. We believe SEO, LinkedIn content, and downloadable guides could help, but we need a more structured plan.`,
+  seoContent: `Vi lanserer et B2B-selskap innen cybersikkerhet rettet mot små og mellomstore bedrifter i Norge. Vi ønsker å styrke synligheten digitalt og få flere relevante henvendelser gjennom nettsiden. Målet er å bygge tillit og skape inbound leads de neste månedene. Vi tror SEO, LinkedIn-innhold og faglig innholdsproduksjon kan være riktig, men vi trenger hjelp til å strukturere en konkret plan.`,
 };
 
 export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
@@ -23,7 +24,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
 
   return (
     <form className="brief-form" onSubmit={handleSubmit}>
-      <label htmlFor="briefText">Paste the client brief</label>
+      <label htmlFor="briefText">Lim inn kundebriefen</label>
 
       <div className="sample-briefs">
         <button
@@ -32,7 +33,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
           onClick={() => setBriefText(sampleBriefs.productLaunch)}
           disabled={isLoading}
         >
-          Sample: Product Launch
+          Eksempel: Produktlansering
         </button>
 
         <button
@@ -41,7 +42,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
           onClick={() => setBriefText(sampleBriefs.leadGeneration)}
           disabled={isLoading}
         >
-          Sample: Lead Generation
+          Eksempel: Leadgenerering
         </button>
 
         <button
@@ -50,7 +51,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
           onClick={() => setBriefText(sampleBriefs.seoContent)}
           disabled={isLoading}
         >
-          Sample: SEO / Content
+          Eksempel: SEO / Innhold
         </button>
       </div>
 
@@ -58,7 +59,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
         id="briefText"
         value={briefText}
         onChange={(e) => setBriefText(e.target.value)}
-        placeholder="Paste a raw client brief here..."
+        placeholder="Lim inn en rå kundebrief her..."
         rows={12}
       />
 
@@ -68,7 +69,7 @@ export default function BriefForm({ onSubmit, isLoading }: BriefFormProps) {
           className="primary-button"
           disabled={isLoading || briefText.trim().length < 20}
         >
-          {isLoading ? "Analyzing..." : "Generate Execution Plan"}
+          {isLoading ? "Analyserer..." : "Generer gjennomføringsplan"}
         </button>
       </div>
     </form>
